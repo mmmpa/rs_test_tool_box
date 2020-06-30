@@ -1,0 +1,8 @@
+[package]
+name = "rs_ttb"
+version = "0.1.0"
+authors = ["mmmpa <mmmpa.mmmpa@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.7.3"
