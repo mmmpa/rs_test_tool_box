@@ -6,3 +6,16 @@ edition = "2018"
 
 [dependencies]
 rand = "0.7.3"
+lazy_static = "1.4.0"
+pretty_env_logger = { version = "0.4", optional = true }
+tokio = { version = "0.2.21", features = ["full"], optional = true }
+log = "0.4.8"
+futures = { version = "0.3", optional = true }
+
+
+[features]
+initialize_once = ["tokio", "futures"]
+initialize_pretty_env_logger = ["pretty_env_logger", "tokio"]
+
+full = [
+"initialize_once","initialize_pretty_env_logger"]
